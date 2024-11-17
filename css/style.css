@@ -10,6 +10,7 @@
 }
 
 :root {
+    --black: rgb(33, 33, 33);
     --blue: rgb(51, 1, 187);
     --green: rgb(28, 180, 28);
     --pink: rgb(252, 65, 90);
@@ -17,6 +18,7 @@
     --red: rgb(216, 46, 46);
     --space: rgb(33, 35, 53);
     --white: rgb(255, 255, 255);
+    --yellow: rgb(255, 158, 12);
 }
 
 body {
@@ -97,7 +99,7 @@ footer {
     justify-content: center;
 }
 
-.bg-gradient {
+.motion-gradient {
     background: linear-gradient(132deg, var(--pink), var(--purple), var(--space));
     background-size: 400% 400%;
     animation: bgGradientAnimation 15s ease infinite;
@@ -107,8 +109,13 @@ footer {
     overflow: hidden;
 }
 
+.bubble {
+    animation-name: bubbleAnimation;
+    animation-duration: 1000ms;
+}
+
 .victory {
-    animation-name: winAnimation;
+    animation-name: victoryAnimation;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
 }
@@ -133,7 +140,19 @@ footer {
     animation: shake 0.4s ease-in-out;
 }
 
-@keyframes winAnimation {
+@keyframes bubbleAnimation {
+
+    30% {
+        transform: scale(105%);
+        color: var(--red);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+@keyframes victoryAnimation {
 
     10%,
     60%,
