@@ -1,0 +1,209 @@
+/* Press Start 2P Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+    font-style: normal;
+}
+
+:root {
+    --black: rgb(33, 33, 33);
+    --blue: rgb(51, 1, 187);
+    --green: rgb(28, 180, 28);
+    --pink: rgb(252, 65, 90);
+    --purple: rgb(89, 27, 197);
+    --red: rgb(216, 46, 46);
+    --space: rgb(33, 35, 53);
+    --white: rgb(255, 255, 255);
+    --yellow: rgb(255, 158, 12);
+}
+
+body {
+    min-height: 100vh;
+    color: var(--white);
+}
+
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 200%;
+}
+
+button {
+    padding: 10px 16px;
+    background-color: var(--white);
+    font-size: 1.3rem;
+    color: var(--blue);
+    border: none;
+    margin: auto 0 auto 0;
+    cursor: pointer;
+}
+
+input {
+    background-color: transparent;
+    padding: 7px;
+    margin-right: .5rem;
+    border: 3px solid var(--white);
+    border-radius: 0px;
+    font-size: 1.3rem;
+    color: var(--white);
+    outline: none;
+}
+
+main {
+    padding: 1rem 2rem;
+    display: flex;
+    min-height: 40vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#secret-number {
+    margin: 1rem;
+    padding: 2rem 2.5rem;
+    background-color: var(--white);
+    font-size: 2rem;
+    color: var(--blue);
+    overflow: visible;
+    position: relative;
+}
+
+#secret-number::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50vw;
+    width: 120vw;
+    height: 12px;
+    background-color: var(--white);
+    transform: translateY(-50%);
+    z-index: -9999;
+}
+
+#feedback-msg {
+    margin: 2rem auto;
+}
+
+footer {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.motion-gradient {
+    background: linear-gradient(132deg, var(--pink), var(--purple), var(--space));
+    background-size: 400% 400%;
+    animation: bgGradientAnimation 15s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bubble {
+    animation-name: bubbleAnimation;
+    animation-duration: 1000ms;
+}
+
+.victory {
+    animation-name: victoryAnimation;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+.victory button,
+.victory #secret-number {
+    color: var(--green);
+}
+
+.gameover {
+    animation-name: gameoverAnimation;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+.gameover button,
+.gameover #secret-number {
+    color: var(--red);
+}
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes bubbleAnimation {
+
+    30% {
+        transform: scale(105%);
+        color: var(--red);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+@keyframes victoryAnimation {
+
+    10%,
+    60%,
+    100% {
+        background-color: var(--green);
+    }
+
+    40% {
+        background-color: var(--purple);
+    }
+}
+
+@keyframes gameoverAnimation {
+
+    10%,
+    60%,
+    100% {
+        background-color: var(--red);
+    }
+
+    40% {
+        background-color: var(--purple);
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    60% {
+        transform: translateX(-10px);
+    }
+
+    40%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes bgGradientAnimation {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}

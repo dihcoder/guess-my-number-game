@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Adivinhe Meu Número | Game</title>
+</head>
+
+<body class="motion-gradient">
+    <header>
+        <button id="restart-btn">Recomeçar!</button>
+        <div>
+            <p>🏆 Recorde: <span id="highscore">0</span></p>
+            <p>🔔 Placar: <span id="scoreboard">20</span></p>
+        </div>
+    </header>
+    <main>
+        <h1 id="game-title">Adivinhe Meu Número!</h1>
+        <p id="secret-number">?</p>
+    </main>
+    <footer>
+        <p id="feedback-msg">&lt;Escolha um número entre 1 e 20&gt;</p>
+        <div>
+            <input id="guess-input" type="number" name="" min="1" max="20" step="1">
+            <button id="check-btn">Verificar</button>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
