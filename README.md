@@ -101,5 +101,5 @@ O projeto foi criado usando HTML, CSS e JavaScript, e se concentra em vários fu
 <br/>
 
 ## Contribuições
-Sinta-se à vontade para abrir problemas ou enviar solicitações de pull.
+Sinta-se à vontade para abrir issues ou enviar pull requests.
 
