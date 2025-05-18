@@ -17,7 +17,7 @@
     - [Estrutura do Projeto](#estrutura-do-projeto)
     - [Funcionalidades](#funcionalidades)
     - [Executar o Projeto Localmente](#executar-o-projeto-localmente)
-    - [Contribuições](#contribuições)
+    - [Contribuições](#contribuicoes)
 
 <br/>
 <br/>
